@@ -13,6 +13,7 @@ import EditPost from './components/EditPost';
 import Profile from './components/Profile';
 import Search from './components/Search';
 import ForgotPassword from './components/ForgotPassword';
+import ResetPassword from './components/ResetPassword'; // Import ResetPassword
 import ErrorBoundary from './components/ErrorBoundary';
 
 function ProtectedRoute() {
@@ -39,6 +40,7 @@ function App() {
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Register />} />
                   <Route path="/forgot-password" element={<ForgotPassword />} />
+                  <Route path="/reset-password" element={<ResetPassword />} /> {/* Add ResetPassword route */}
                   <Route element={<ProtectedRoute />}>
                     <Route path="/feed" element={<Feed />} />
                     <Route path="/create-post" element={<CreatePost />} />
